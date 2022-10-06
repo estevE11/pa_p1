@@ -1,6 +1,19 @@
 #include <iostream>
 
+void cambiarValor(int* a);
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    int a = 10;
+    int *b = &a;
+    *b = 11;
+
+    cambiarValor(&a);
+
+    std::cout << a << std::endl;
+    std::cout << b << std::endl;
     return 0;
+}
+
+void cambiarValor(int* a) {
+    *a = 324;
 }

@@ -3,4 +3,4 @@ project(prog_practica1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(prog_practica1 main.cpp)
+add_executable(prog_practica1 main.cpp Tauler.cpp Tauler.h Bombeta.cpp Bombeta.h)
