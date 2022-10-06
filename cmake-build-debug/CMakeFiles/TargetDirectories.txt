@@ -1,0 +1,3 @@
+/Users/esteve/dev/prog_practica1/cmake-build-debug/CMakeFiles/prog_practica1.dir
+/Users/esteve/dev/prog_practica1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/esteve/dev/prog_practica1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
