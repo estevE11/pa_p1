@@ -9,18 +9,20 @@
 #include "Bombeta.h"
 
 class Tauler {
-public:
-    Tauler();
-    void imprimir();
-    Bombeta * getBombeta(int x, int y);
-    void setBombeta(int x, int y, bool val);
-    void toggleBombeta(int x, int y);
 private:
     int w = 8;
     int h = 8;
     Bombeta bombetes[8*8];
-    int moviments_x[8] = {1, 2, 3, 4, 5, 6, 7, 8};
-    int moviments_y[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int moviments_x[8] = {1, 0, 0, 0, 0, 0, 0, 0};
+    int moviments_y[8] = {1, 0, 0, 0, 0, 0, 0, 0};
+public:
+    Tauler();
+    void imprimir();
+    Bombeta* getBombeta(int x, int y);
+    void setBombeta(int x, int y, bool val);
+    void toggleBombeta(int x, int y);
+    void selecBombeta(int x, int y);
+
 
 };
 

@@ -46,5 +46,14 @@ void Tauler::setBombeta(int x, int y, bool val) {
 }
 
 void Tauler::toggleBombeta(int x, int y) {
-    this->getBombeta(x, y)->toggle();
+    if(x < this->w && x >= 0 && y < this->h && y >= 0)
+        this->getBombeta(x, y)->toggle();
+}
+
+void Tauler::selecBombeta(int x, int y) {
+    this->toggleBombeta(x, y);
+    for(int i = 0; i < sizeof(this->moviments_x); i++) {
+        if(this->moviments_x[i] != 0)
+            this->toggleBombeta(x+this->moviments_x[i], y+this->moviments_y[i]);
+    }
 }
