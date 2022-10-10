@@ -8,3 +8,7 @@
 Tauler::Tauler() {
 
 }
+
+void Tauler::imprimir() {
+
+}

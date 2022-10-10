@@ -11,9 +11,12 @@
 class Tauler {
 public:
     Tauler();
+    void imprimir();
 
 private:
-    Bombeta bombetes;
+    int w = 8;
+    int h = 8;
+    Bombeta bombetes[8*8];
     int moviments_x[8] = {1, 2, 3, 4, 5, 6, 7, 8};
     int moviments_y[8] = {1, 2, 3, 4, 5, 6, 7, 8};
 
