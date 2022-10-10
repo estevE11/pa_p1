@@ -1,16 +1,12 @@
 #include <iostream>
+#include "Tauler.h"
 
 void cambiarValor(int* a);
 
 int main() {
-    int a = 10;
-    int *b = &a;
-    *b = 11;
+    Tauler tauler;
+    tauler.imprimir();
 
-    cambiarValor(&a);
-
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
     return 0;
 }
 

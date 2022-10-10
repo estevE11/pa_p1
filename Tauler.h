@@ -12,6 +12,7 @@ class Tauler {
 public:
     Tauler();
     void imprimir();
+    Bombeta getBombeta(int x, int y);
 
 private:
     int w = 8;

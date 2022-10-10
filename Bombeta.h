@@ -7,7 +7,14 @@
 
 
 class Bombeta {
-
+private:
+    int active;
+public:
+    Bombeta();
+    Bombeta(bool active);
+    bool isActive();
+    void setActive(bool active);
+    void toggle();
 };
 
 
