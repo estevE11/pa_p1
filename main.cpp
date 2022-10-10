@@ -6,6 +6,10 @@ void cambiarValor(int* a);
 int main() {
     Tauler tauler;
     tauler.imprimir();
+    tauler.toggleBombeta(2, 2);
+    tauler.imprimir();
+
+
 
     return 0;
 }
