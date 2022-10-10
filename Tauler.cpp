@@ -13,28 +13,28 @@ Tauler::Tauler() {
 
 void Tauler::imprimir() {
     // Decoració
-    std::cout << "╔";
-    for(int x = 0; x < this->w*2+1; x++) {
-        std::cout << "═";
+    std::cout << "+";
+    for(int x = 0; x < this->w*2; x++) {
+        std::cout << "=";
     }
-    std::cout << "╗" << std::endl;
+    std::cout << "+" << std::endl;
 
     // Codi per imprimir el tauler
     for(int y = 0; y < this->h; y++) {
-        std::cout << "║ ";
+        std::cout << "|";
         for(int x = 0; x < this->w; x++) {
-            std::cout << (this->getBombeta(x, y)->isActive() ? "■" : "□");
+            std::cout << (this->getBombeta(x, y)->isActive() ? "O" : "-");
             std::cout << " ";
         }
-        std::cout << "║" << std::endl;
+        std::cout << "|" << std::endl;
     }
 
     // Decoració
-    std::cout << "╚";
-    for(int x = 0; x < this->w*2+1; x++) {
-        std::cout << "═";
+    std::cout << "+";
+    for(int x = 0; x < this->w*2; x++) {
+        std::cout << "=";
     }
-    std::cout << "╝" << std::endl;
+    std::cout << "+" << std::endl;
 }
 
 Bombeta* Tauler::getBombeta(int x, int y) {
@@ -52,7 +52,7 @@ void Tauler::toggleBombeta(int x, int y) {
 
 void Tauler::selecBombeta(int x, int y) {
     this->toggleBombeta(x, y);
-    for(int i = 0; i < sizeof(this->moviments_x); i++) {
+    for(int i = 0; i < sizeof(this->moviments_x)/sizeof(int); i++) {
         if(this->moviments_x[i] != 0)
             this->toggleBombeta(x+this->moviments_x[i], y+this->moviments_y[i]);
     }

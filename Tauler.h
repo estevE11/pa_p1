@@ -13,8 +13,8 @@ private:
     int w = 8;
     int h = 8;
     Bombeta bombetes[8*8];
-    int moviments_x[8] = {1, 0, 0, 0, 0, 0, 0, 0};
-    int moviments_y[8] = {1, 0, 0, 0, 0, 0, 0, 0};
+    int moviments_x[8] = {2, 1, -2, -1, 2, -2, 1, -1};
+    int moviments_y[8] = {1, 2, 1, 2, -1, -1, -2, -2};
 public:
     Tauler();
     void imprimir();
