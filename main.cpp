@@ -5,24 +5,27 @@
 
 void cambiarValor(int* a);
 
+bool isNumber(char *str);
+
 int main() {
     // Cambiem el codificador del text de la consola a UTF-16 per poder mostrar
     // caracters unicode y poder fer el joc millor esteticament
     _setmode(_fileno(stdout), _O_U16TEXT);
 
-    char str[500];
-    std::cin.getline(str, 500, '\n');
-    wprintf(L"%s", str);
-
     Tauler tauler;
-    tauler.imprimir();
-    //tauler.toggleBombeta(2, 2);
-    tauler.selecBombeta(3, 3);
-    tauler.imprimir();
+
+    for(int i = 0; i < 5; i++) {
+        tauler.imprimir();
+        int x_str;
+        int y_str;
+        bool b = std::isdigit(x_str);
+        printf("%c%d", x_str,b);
+        wprintf(L"Coordenada X: ");
+        std::cin >> x_str;
+        wprintf(L"Coordenada Y: ");
+        std::cin >> y_str;
+        tauler.selecBombeta(x_str, y_str);
+    }
 
     return 0;
-}
-
-void cambiarValor(int* a) {
-    *a = 324;
 }
