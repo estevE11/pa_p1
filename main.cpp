@@ -14,18 +14,26 @@ int main() {
 
     Tauler tauler;
 
+    //TODO: pedir cuantas bombillas quiere que esten encendidas al principio
+    //TODO: encender X numero de bombillas con posicion aleatoria
+    //TODO: perdir el maximo numero de tiradas
+
     for(int i = 0; i < 5; i++) {
         tauler.imprimir();
         int x_str;
         int y_str;
-        bool b = std::isdigit(x_str);
-        printf("%c%d", x_str,b);
         wprintf(L"Coordenada X: ");
         std::cin >> x_str;
         wprintf(L"Coordenada Y: ");
         std::cin >> y_str;
+        //TODO: comprobar que las coordenadas estan entre [0, 7]
         tauler.selecBombeta(x_str, y_str);
     }
+
+    //TODO: una vez acabada la partida informar de cuantas bombillas estaban encendida i apagadas despues de cada tirada
+    //TODO: preguntar si quiere jugar otra vez
+    // SI> Vuelves al principio, pides toda la informacion
+    // NO> Cierras el programa
 
     return 0;
 }
