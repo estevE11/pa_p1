@@ -10,6 +10,10 @@ int main() {
     // caracters unicode y poder fer el joc millor esteticament
     _setmode(_fileno(stdout), _O_U16TEXT);
 
+    char str[500];
+    std::cin.getline(str, 500, '\n');
+    wprintf(L"%s", str);
+
     Tauler tauler;
     tauler.imprimir();
     //tauler.toggleBombeta(2, 2);

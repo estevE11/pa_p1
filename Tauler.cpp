@@ -12,8 +12,17 @@ Tauler::Tauler() {
 }
 
 void Tauler::imprimir() {
-    // filera de numeros
+    /*
+
+     * Utilitzem "wprintf" per poder imprimir en codificacio UTF-8.
+     * La "L" devant de l'string significa que utilitza "chars" mes grans, es a dir en comptes d'utilitzar 8bits per caracter utilitza 16bits.
+     * Aixi es poden representar tots els caracters de UTF-8.
+     * L'inconvenient es que el nostre programa ocupara mes memoria
+
+    */
     wprintf(L"  ");
+
+    // filera de numeros
     for(int x = 0; x < this->w*2; x++) {
         if(x%2==0)
             wprintf(L" %d", x/2);
@@ -21,7 +30,7 @@ void Tauler::imprimir() {
     wprintf(L"\n");
 
     // Decoració
-    wprintf(L" ╔");
+    wprintf(L"  ╔");
     for(int x = 0; x < this->w*2+1; x++) {
         wprintf(L"═");
     }
@@ -29,7 +38,7 @@ void Tauler::imprimir() {
 
     // Codi per imprimir el tauler
     for(int y = 0; y < this->h; y++) {
-        wprintf(L"%d║ ", y);
+        wprintf(L"%d ║ ", y);
         for(int x = 0; x < this->w; x++) {
             wprintf((this->getBombeta(x, y)->isActive() ? L"■" : L"-"));
             wprintf(L" ");
@@ -38,7 +47,7 @@ void Tauler::imprimir() {
     }
 
     // Decoració
-    wprintf(L" ╚");
+    wprintf(L"  ╚");
     for(int x = 0; x < this->w*2+1; x++) {
         wprintf(L"═");
     }
