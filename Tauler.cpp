@@ -12,29 +12,37 @@ Tauler::Tauler() {
 }
 
 void Tauler::imprimir() {
-    // Decoració
-    std::cout << "+";
+    // filera de numeros
+    wprintf(L"  ");
     for(int x = 0; x < this->w*2; x++) {
-        std::cout << "=";
+        if(x%2==0)
+            wprintf(L" %d", x/2);
     }
-    std::cout << "+" << std::endl;
+    wprintf(L"\n");
+
+    // Decoració
+    wprintf(L" ╔");
+    for(int x = 0; x < this->w*2+1; x++) {
+        wprintf(L"═");
+    }
+    wprintf(L"╗\n");
 
     // Codi per imprimir el tauler
     for(int y = 0; y < this->h; y++) {
-        std::cout << "|";
+        wprintf(L"%d║ ", y);
         for(int x = 0; x < this->w; x++) {
-            std::cout << (this->getBombeta(x, y)->isActive() ? "O" : "-");
-            std::cout << " ";
+            wprintf((this->getBombeta(x, y)->isActive() ? L"■" : L"-"));
+            wprintf(L" ");
         }
-        std::cout << "|" << std::endl;
+        wprintf(L"║\n");
     }
 
     // Decoració
-    std::cout << "+";
-    for(int x = 0; x < this->w*2; x++) {
-        std::cout << "=";
+    wprintf(L" ╚");
+    for(int x = 0; x < this->w*2+1; x++) {
+        wprintf(L"═");
     }
-    std::cout << "+" << std::endl;
+    wprintf(L"╝\n");
 }
 
 Bombeta* Tauler::getBombeta(int x, int y) {

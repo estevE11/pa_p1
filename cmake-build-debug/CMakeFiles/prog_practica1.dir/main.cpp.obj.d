@@ -132,4 +132,8 @@ CMakeFiles/prog_practica1.dir/main.cpp.obj: \
  C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
  C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
  C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
- D:\dev\prog_practica1\Tauler.h D:\dev\prog_practica1\Bombeta.h
+ D:\dev\prog_practica1\Tauler.h D:\dev\prog_practica1\Bombeta.h \
+ C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/fcntl.h \
+ C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/io.h \
+ C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/string.h \
+ C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h

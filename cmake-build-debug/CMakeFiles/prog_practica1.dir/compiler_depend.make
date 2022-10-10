@@ -274,7 +274,11 @@ CMakeFiles/prog_practica1.dir/main.cpp.obj: ../main.cpp \
   C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
   C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
   ../Tauler.h \
-  ../Bombeta.h
+  ../Bombeta.h \
+  C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/fcntl.h \
+  C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/io.h \
+  C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/string.h \
+  C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
 
 
 C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_function.h:
@@ -317,6 +321,8 @@ C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/m
 
 C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iosfwd:
 
+C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h:
+
 C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stringfwd.h:
 
 C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward/binders.h:
@@ -338,6 +344,8 @@ C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/m
 C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h:
 
 C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/nested_exception.h:
+
+C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/fcntl.h:
 
 C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h:
 
@@ -550,3 +558,7 @@ C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/m
 C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc:
 
 ../main.cpp:
+
+C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/io.h:
+
+C:/Users/Cocon/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/222.4167.35/bin/mingw/x86_64-w64-mingw32/include/string.h:
