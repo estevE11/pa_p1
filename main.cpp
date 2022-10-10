@@ -14,7 +14,7 @@ int main() {
 
     Tauler tauler;
 
-    //TODO: pedir cuantas bombillas quiere que esten encendidas al principio
+    //TODO: pedir cuantas bombillas quiere que esten encendidas al principio [1, 64]
     //TODO: encender X numero de bombillas con posicion aleatoria
     //TODO: perdir el maximo numero de tiradas
 
