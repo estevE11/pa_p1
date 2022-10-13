@@ -50,6 +50,7 @@ int main() {
     }
 
     //TODO: una vez acabada la partida informar de cuantas bombillas estaban encendida i apagadas despues de cada tirada
+
     //TODO: preguntar si quiere jugar otra vez
     // SI> Vuelves al principio, pides toda la informacion
     // NO> Cierras el programa
