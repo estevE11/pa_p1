@@ -2,6 +2,8 @@
 #include "Tauler.h"
 #include <fcntl.h>
 #include <io.h>
+#include <time.h>
+#include <stdlib.h>
 
 void cambiarValor(int* a);
 
@@ -12,13 +14,28 @@ int main() {
     // caracters unicode y poder fer el joc millor esteticament
     _setmode(_fileno(stdout), _O_U16TEXT);
 
+    int numbom;
+    srand(time(NULL));
+    int numx;
+    int numy;
+    int lim_inf = 0;
+    int lim_sup = 7;
+    int numtir;
     Tauler tauler;
 
     //TODO: pedir cuantas bombillas quiere que esten encendidas al principio [1, 64]
+    wprintf(L"Cuantas bombillas desea que esten encendidas?");
+    std::cin >> numbom;
     //TODO: encender X numero de bombillas con posicion aleatoria
+    for (int i = 0; i < numbom; ++i) {
+        numx = lim_inf + rand() % (lim_sup+1 - lim_inf);
+        numy = lim_inf + rand() % (lim_sup+1 - lim_inf);
+        tauler.toggleBombeta(numx,numy);
+    }
     //TODO: perdir el maximo numero de tiradas
-
-    for(int i = 0; i < 5; i++) {
+    wprintf(L"Numero de tiradas?");
+    std::cin >> numtir;
+    for(int i = 0; i < numtir; i++) {
         tauler.imprimir();
         int x_str;
         int y_str;
