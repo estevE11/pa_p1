@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\dev\prog_practica1
+CMAKE_SOURCE_DIR = C:\Users\ziade\CLionProjects\prog_practica1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\dev\prog_practica1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\ziade\CLionProjects\prog_practica1\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/prog_practica1.dir/depend.make
@@ -71,44 +71,44 @@ include CMakeFiles/prog_practica1.dir/flags.make
 CMakeFiles/prog_practica1.dir/main.cpp.obj: CMakeFiles/prog_practica1.dir/flags.make
 CMakeFiles/prog_practica1.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/prog_practica1.dir/main.cpp.obj: CMakeFiles/prog_practica1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\prog_practica1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/prog_practica1.dir/main.cpp.obj"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog_practica1.dir/main.cpp.obj -MF CMakeFiles\prog_practica1.dir\main.cpp.obj.d -o CMakeFiles\prog_practica1.dir\main.cpp.obj -c D:\dev\prog_practica1\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ziade\CLionProjects\prog_practica1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/prog_practica1.dir/main.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog_practica1.dir/main.cpp.obj -MF CMakeFiles\prog_practica1.dir\main.cpp.obj.d -o CMakeFiles\prog_practica1.dir\main.cpp.obj -c C:\Users\ziade\CLionProjects\prog_practica1\main.cpp
 
 CMakeFiles/prog_practica1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog_practica1.dir/main.cpp.i"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\prog_practica1\main.cpp > CMakeFiles\prog_practica1.dir\main.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ziade\CLionProjects\prog_practica1\main.cpp > CMakeFiles\prog_practica1.dir\main.cpp.i
 
 CMakeFiles/prog_practica1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog_practica1.dir/main.cpp.s"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\prog_practica1\main.cpp -o CMakeFiles\prog_practica1.dir\main.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ziade\CLionProjects\prog_practica1\main.cpp -o CMakeFiles\prog_practica1.dir\main.cpp.s
 
 CMakeFiles/prog_practica1.dir/Tauler.cpp.obj: CMakeFiles/prog_practica1.dir/flags.make
 CMakeFiles/prog_practica1.dir/Tauler.cpp.obj: ../Tauler.cpp
 CMakeFiles/prog_practica1.dir/Tauler.cpp.obj: CMakeFiles/prog_practica1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\prog_practica1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/prog_practica1.dir/Tauler.cpp.obj"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog_practica1.dir/Tauler.cpp.obj -MF CMakeFiles\prog_practica1.dir\Tauler.cpp.obj.d -o CMakeFiles\prog_practica1.dir\Tauler.cpp.obj -c D:\dev\prog_practica1\Tauler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ziade\CLionProjects\prog_practica1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/prog_practica1.dir/Tauler.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog_practica1.dir/Tauler.cpp.obj -MF CMakeFiles\prog_practica1.dir\Tauler.cpp.obj.d -o CMakeFiles\prog_practica1.dir\Tauler.cpp.obj -c C:\Users\ziade\CLionProjects\prog_practica1\Tauler.cpp
 
 CMakeFiles/prog_practica1.dir/Tauler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog_practica1.dir/Tauler.cpp.i"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\prog_practica1\Tauler.cpp > CMakeFiles\prog_practica1.dir\Tauler.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ziade\CLionProjects\prog_practica1\Tauler.cpp > CMakeFiles\prog_practica1.dir\Tauler.cpp.i
 
 CMakeFiles/prog_practica1.dir/Tauler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog_practica1.dir/Tauler.cpp.s"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\prog_practica1\Tauler.cpp -o CMakeFiles\prog_practica1.dir\Tauler.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ziade\CLionProjects\prog_practica1\Tauler.cpp -o CMakeFiles\prog_practica1.dir\Tauler.cpp.s
 
 CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj: CMakeFiles/prog_practica1.dir/flags.make
 CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj: ../Bombeta.cpp
 CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj: CMakeFiles/prog_practica1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\prog_practica1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj -MF CMakeFiles\prog_practica1.dir\Bombeta.cpp.obj.d -o CMakeFiles\prog_practica1.dir\Bombeta.cpp.obj -c D:\dev\prog_practica1\Bombeta.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ziade\CLionProjects\prog_practica1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj -MF CMakeFiles\prog_practica1.dir\Bombeta.cpp.obj.d -o CMakeFiles\prog_practica1.dir\Bombeta.cpp.obj -c C:\Users\ziade\CLionProjects\prog_practica1\Bombeta.cpp
 
 CMakeFiles/prog_practica1.dir/Bombeta.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog_practica1.dir/Bombeta.cpp.i"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\prog_practica1\Bombeta.cpp > CMakeFiles\prog_practica1.dir\Bombeta.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ziade\CLionProjects\prog_practica1\Bombeta.cpp > CMakeFiles\prog_practica1.dir\Bombeta.cpp.i
 
 CMakeFiles/prog_practica1.dir/Bombeta.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog_practica1.dir/Bombeta.cpp.s"
-	C:\Users\Cocon\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4167.35\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\prog_practica1\Bombeta.cpp -o CMakeFiles\prog_practica1.dir\Bombeta.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ziade\CLionProjects\prog_practica1\Bombeta.cpp -o CMakeFiles\prog_practica1.dir\Bombeta.cpp.s
 
 # Object files for target prog_practica1
 prog_practica1_OBJECTS = \
@@ -126,7 +126,7 @@ prog_practica1.exe: CMakeFiles/prog_practica1.dir/build.make
 prog_practica1.exe: CMakeFiles/prog_practica1.dir/linklibs.rsp
 prog_practica1.exe: CMakeFiles/prog_practica1.dir/objects1.rsp
 prog_practica1.exe: CMakeFiles/prog_practica1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\dev\prog_practica1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable prog_practica1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\ziade\CLionProjects\prog_practica1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable prog_practica1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\prog_practica1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/prog_practica1.dir/clean:
 .PHONY : CMakeFiles/prog_practica1.dir/clean
 
 CMakeFiles/prog_practica1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\dev\prog_practica1 D:\dev\prog_practica1 D:\dev\prog_practica1\cmake-build-debug D:\dev\prog_practica1\cmake-build-debug D:\dev\prog_practica1\cmake-build-debug\CMakeFiles\prog_practica1.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ziade\CLionProjects\prog_practica1 C:\Users\ziade\CLionProjects\prog_practica1 C:\Users\ziade\CLionProjects\prog_practica1\cmake-build-debug C:\Users\ziade\CLionProjects\prog_practica1\cmake-build-debug C:\Users\ziade\CLionProjects\prog_practica1\cmake-build-debug\CMakeFiles\prog_practica1.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/prog_practica1.dir/depend
 

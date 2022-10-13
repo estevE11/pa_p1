@@ -5,9 +5,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-void cambiarValor(int* a);
-
-bool isNumber(char *str);
+int random(int min, int max);
 
 int main() {
     // Cambiem el codificador del text de la consola a UTF-16 per poder mostrar
@@ -28,9 +26,13 @@ int main() {
     std::cin >> numbom;
     //TODO: encender X numero de bombillas con posicion aleatoria
     for (int i = 0; i < numbom; ++i) {
-        numx = lim_inf + rand() % (lim_sup+1 - lim_inf);
-        numy = lim_inf + rand() % (lim_sup+1 - lim_inf);
-        tauler.toggleBombeta(numx,numy);
+        numx = random(lim_inf, lim_sup);
+        numy = random(lim_inf, lim_sup);
+        while(tauler.getBombeta(numx,numy)->isActive()) {
+            numx = random(lim_inf, lim_sup);
+            numy = random(lim_inf, lim_sup);
+        }
+        tauler.setBombeta(numx,numy, true);
     }
     //TODO: perdir el maximo numero de tiradas
     wprintf(L"Numero de tiradas?");

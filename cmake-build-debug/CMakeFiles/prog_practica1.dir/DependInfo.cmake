@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/dev/prog_practica1/Bombeta.cpp" "CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj" "gcc" "CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj.d"
-  "D:/dev/prog_practica1/Tauler.cpp" "CMakeFiles/prog_practica1.dir/Tauler.cpp.obj" "gcc" "CMakeFiles/prog_practica1.dir/Tauler.cpp.obj.d"
-  "D:/dev/prog_practica1/main.cpp" "CMakeFiles/prog_practica1.dir/main.cpp.obj" "gcc" "CMakeFiles/prog_practica1.dir/main.cpp.obj.d"
+  "C:/Users/ziade/CLionProjects/prog_practica1/Bombeta.cpp" "CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj" "gcc" "CMakeFiles/prog_practica1.dir/Bombeta.cpp.obj.d"
+  "C:/Users/ziade/CLionProjects/prog_practica1/Tauler.cpp" "CMakeFiles/prog_practica1.dir/Tauler.cpp.obj" "gcc" "CMakeFiles/prog_practica1.dir/Tauler.cpp.obj.d"
+  "C:/Users/ziade/CLionProjects/prog_practica1/main.cpp" "CMakeFiles/prog_practica1.dir/main.cpp.obj" "gcc" "CMakeFiles/prog_practica1.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.
