@@ -4,10 +4,15 @@
 
 #include "Tauler.h"
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
+int random(int min, int max);
 
 Tauler::Tauler() {
-    for(int i = 0; i < this->w*this->h; i++) {
-        this->bombetes[i] = *new Bombeta(false);
+    for(int i = 0; i < this->w; i++) {
+        for (int j = 0; j < this->h; ++j) {
+            this->bombetes[i][j] = *new Bombeta(false);
+        }
     }
 }
 
@@ -55,7 +60,7 @@ void Tauler::imprimir() {
 }
 
 Bombeta* Tauler::getBombeta(int x, int y) {
-    return &this->bombetes[x + y * this->w];
+    return &this->bombetes[x][y];
 }
 
 void Tauler::setBombeta(int x, int y, bool val) {
@@ -72,5 +77,34 @@ void Tauler::selecBombeta(int x, int y) {
     for(int i = 0; i < sizeof(this->moviments_x)/sizeof(int); i++) {
         if(this->moviments_x[i] != 0)
             this->toggleBombeta(x+this->moviments_x[i], y+this->moviments_y[i]);
+    }
+}
+void Tauler::onRandomBombeta(int numBombetes) {
+    int numx;
+    int numy;
+    int lim_inf = 0;
+    int lim_sup = 7;
+
+    for (int i = 0; i < numBombetes; ++i) {
+        numx = random(lim_inf, lim_sup);
+        numy = random(lim_inf, lim_sup);
+        while(this->getBombeta(numx,numy)->isActive()) {
+            numx = random(lim_inf, lim_sup);
+            numy = random(lim_inf, lim_sup);
+        }
+        this->setBombeta(numx,numy, true);
+    }
+}
+
+int random(int min, int max) {
+    srand(time(NULL));
+    return min + rand() % (max+1 - min);
+}
+
+void Tauler::offAll() {
+    for(int i = 0; i < this->w; i++) {
+        for (int j = 0; j < this->h; ++j) {
+            this->getBombeta(i,j)->setActive(false);
+        }
     }
 }
