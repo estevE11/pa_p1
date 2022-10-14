@@ -108,3 +108,13 @@ void Tauler::offAll() {
         }
     }
 }
+
+int Tauler::getOnBombetes() {
+    int count = 0;
+    for(int i = 0; i < this->w; i++) {
+        for (int j = 0; j < this->h; ++j) {
+            if(this->getBombeta(i, j)->isActive()) count++;
+        }
+    }
+    return count;
+}

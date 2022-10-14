@@ -3,9 +3,6 @@
 #include <fcntl.h>
 #include <io.h>
 
-
-
-
 int main() {
     // Cambiem el codificador del text de la consola a UTF-16 per poder mostrar
     // caracters unicode y poder fer el joc millor esteticament
@@ -16,15 +13,19 @@ int main() {
     int numbom;
     int numtir;
     Tauler tauler;
+    bool jugar = true;
 
-    //pedir cuantas bombillas quiere que esten encendidas al principio [1, 64]
-    wprintf(L"Cuantas bombillas desea que esten encendidas?");
-    std::cin >> numbom;
-    //encender X numero de bombillas con posicion aleatoria
-    tauler.onRandomBombeta(numbom);
-    //perdir el maximo numero de tiradas
-    wprintf(L"Numero de tiradas?");
-    std::cin >> numtir;
+    while(jugar) {
+        //pedir cuantas bombillas quiere que esten encendidas al principio [1, 64]
+        wprintf(L"Cuantas bombillas desea que esten encendidas?");
+        std::cin >> numbom;
+        //encender X numero de bombillas con posicion aleatoria
+        tauler.onRandomBombeta(numbom);
+        //perdir el maximo numero de tiradas
+        wprintf(L"Numero de tiradas?");
+        std::cin >> numtir;
+        //Crear array con tamaño n (n = numero de tiradas)
+        int* historial_tirades = new int[numtir];
 
     //TODO: Crear array con tamaño n (n = numero de tiradas)
 
@@ -48,5 +49,3 @@ int main() {
 
     return 0;
 }
-
-//TODO: Metodo para volver a jugar

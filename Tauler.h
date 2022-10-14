@@ -24,12 +24,14 @@ public:
     void setBombeta(int x, int y, bool val);
     void toggleBombeta(int x, int y);
     void selecBombeta(int x, int y);
-    // TODO: Metodo para encender n bombetas aleatoriamente (lo q hay en main, se tiene q hacer en un metodo)
+    // Metodo para encender n bombetas aleatoriamente (lo q hay en main, se tiene q hacer en un metodo)
     void onRandomBombeta(int numBombetes);
-    // TODO: Metodo para apagar todas las bombillas
+    // Metodo para apagar todas las bombillas
     void offAll();
-    // Ningun metodo aqui puede tener "std::cin"
+    // Metodo para contar cuantas bombillas hay encendidas
+    int getOnBombetes();
 
+    // Ningun metodo aqui puede tener "std::cin"
 };
 
 
