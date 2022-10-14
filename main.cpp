@@ -9,33 +9,25 @@
 int main() {
     // Cambiem el codificador del text de la consola a UTF-16 per poder mostrar
     // caracters unicode y poder fer el joc millor esteticament
+    // Aixo fara que haguem d'utilitzar obligatoriament "wprintf" per imprimir
+    // ja que ni el "std::cout" ni el "printf" funcionaran
     _setmode(_fileno(stdout), _O_U16TEXT);
 
     int numbom;
-    srand(time(NULL));
-    int numx;
-    int numy;
-    int lim_inf = 0;
-    int lim_sup = 7;
     int numtir;
     Tauler tauler;
 
-    //TODO: pedir cuantas bombillas quiere que esten encendidas al principio [1, 64]
+    //pedir cuantas bombillas quiere que esten encendidas al principio [1, 64]
     wprintf(L"Cuantas bombillas desea que esten encendidas?");
     std::cin >> numbom;
-    //TODO: encender X numero de bombillas con posicion aleatoria
-    for (int i = 0; i < numbom; ++i) {
-        numx = random(lim_inf, lim_sup);
-        numy = random(lim_inf, lim_sup);
-        while(tauler.getBombeta(numx,numy)->isActive()) {
-            numx = random(lim_inf, lim_sup);
-            numy = random(lim_inf, lim_sup);
-        }
-        tauler.setBombeta(numx,numy, true);
-    }
-    //TODO: perdir el maximo numero de tiradas
+    //encender X numero de bombillas con posicion aleatoria
+    tauler.onRandomBombeta(numbom);
+    //perdir el maximo numero de tiradas
     wprintf(L"Numero de tiradas?");
     std::cin >> numtir;
+
+    //TODO: Crear array con tamaño n (n = numero de tiradas)
+
     for(int i = 0; i < numtir; i++) {
         tauler.imprimir();
         int x_str;
@@ -56,3 +48,5 @@ int main() {
 
     return 0;
 }
+
+//TODO: Metodo para volver a jugar
