@@ -27,25 +27,45 @@ int main() {
         //Crear array con tamaño n (n = numero de tiradas)
         int* historial_tirades = new int[numtir];
 
-    //TODO: Crear array con tamaño n (n = numero de tiradas)
-
-    for(int i = 0; i < numtir; i++) {
+        for (int i = 0; i < numtir; i++) {
+            tauler.imprimir();
+            int x;
+            int y;
+            //Comprobar que las coordenadas estan entre [0, 7]
+            wprintf(L"Coordenada X: ");
+            std::cin >> x;
+            while (x < 0 || x > 7) {
+                wprintf(L"Les cordenades han d'estar entre 0 i 7");
+                wprintf(L"Coordenada X: ");
+                std::cin >> x;
+            }
+            wprintf(L"Coordenada Y: ");
+            std::cin >> y;
+            while (y < 0 || y > 7) {
+                wprintf(L"Les cordenades han d'estar entre 0 i 7\n");
+                wprintf(L"Coordenada Y: ");
+                std::cin >> y;
+            }
+            tauler.selecBombeta(x, y);
+            historial_tirades[i] = tauler.getOnBombetes();
+        }
         tauler.imprimir();
-        int x_str;
-        int y_str;
-        wprintf(L"Coordenada X: ");
-        std::cin >> x_str;
-        wprintf(L"Coordenada Y: ");
-        std::cin >> y_str;
-        //TODO: comprobar que las coordenadas estan entre [0, 7]
-        tauler.selecBombeta(x_str, y_str);
+        wprintf(L"Ja no tens mes tirades. El joc ha acabat\n");
+        // Una vez acabada la partida informar de cuantas bombillas estaban encendida i apagadas despues de cada tirada
+        for (int i = 0; i < numtir; i++) {
+            wprintf(L"Tirada %d: %d enceses i %d apagades\n", i + 1, historial_tirades[i], 64 - historial_tirades[i]);
+        }
+        // Preguntar si quiere jugar otra vez
+        // SI> Vuelves al principio, pides toda la informacion
+        // NO> Cierras el programa
+        wprintf(L"Vols tornar a jugar?(n o N per acabar)\n");
+        char respuesta;
+        std::cin >> respuesta;
+        if(respuesta == 'n' || respuesta == 'N') {
+            jugar = false;
+        }
+        tauler.offAll();
     }
-
-    //TODO: una vez acabada la partida informar de cuantas bombillas estaban encendida i apagadas despues de cada tirada
-
-    //TODO: preguntar si quiere jugar otra vez
-    // SI> Vuelves al principio, pides toda la informacion
-    // NO> Cierras el programa
 
     return 0;
 }
