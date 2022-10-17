@@ -55,6 +55,7 @@ int main() {
         for (int i = 0; i < numtir; i++) {
             wprintf(L"Tirada %d: %d enceses i %d apagades\n", i + 1, historial_tirades[i], 64 - historial_tirades[i]);
         }
+        delete[] historial_tirades;
         // Preguntar si quiere jugar otra vez
         // SI> Vuelves al principio, pides toda la informacion
         // NO> Cierras el programa
