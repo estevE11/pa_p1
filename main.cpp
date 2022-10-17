@@ -3,70 +3,84 @@
 #include <fcntl.h>
 #include <io.h>
 
+static int demanarInt(const std::string&, int min, int max);
+static bool tornarJugar(Tauler* tauler);
+
 int main() {
     // Cambiem el codificador del text de la consola a UTF-16 per poder mostrar
     // caracters unicode y poder fer el joc millor esteticament
-    // Aixo fara que haguem d'utilitzar obligatoriament "wprintf" per imprimir
+    // Aixo fara que haguem d'utilitzar obligatoriament "wprintf" per visualitzar
     // ja que ni el "std::cout" ni el "printf" funcionaran
     _setmode(_fileno(stdout), _O_U16TEXT);
 
-    int numbom;
-    int numtir;
     Tauler tauler;
     bool jugar = true;
 
     while(jugar) {
-        //pedir cuantas bombillas quiere que esten encendidas al principio [1, 64]
-        wprintf(L"Cuantas bombillas desea que esten encendidas?");
-        std::cin >> numbom;
-        //encender X numero de bombillas con posicion aleatoria
-        tauler.onRandomBombeta(numbom);
-        //perdir el maximo numero de tiradas
-        wprintf(L"Numero de tiradas?");
-        std::cin >> numtir;
-        //Crear array con tamaño n (n = numero de tiradas)
+        // Demanar cuantes contenidor vol l'usuari que estiguin enceses al principi [1, 64]
+        int numbom = demanarInt("Quantes contenidor vols que estigun enceses?", 1, 64);
+
+        // Encendre N numero de contenidor aleatoriament posicionades
+        tauler.encendre(numbom);
+
+        // Demanar el nombre de tirades
+        // Hem decidit posar 500 per tenir un límit
+        int numtir = demanarInt("Numero de tirades?", 1, 500);
+
+        // Crear un array amb mida (n = numero de tirades)
         int* historial_tirades = new int[numtir];
 
         for (int i = 0; i < numtir; i++) {
-            tauler.imprimir();
+            tauler.visualitzar();
             int x;
             int y;
-            //Comprobar que las coordenadas estan entre [0, 7]
-            wprintf(L"Coordenada X: ");
-            std::cin >> x;
-            while (x < 0 || x > 7) {
-                wprintf(L"Les cordenades han d'estar entre 0 i 7");
-                wprintf(L"Coordenada X: ");
-                std::cin >> x;
-            }
-            wprintf(L"Coordenada Y: ");
-            std::cin >> y;
-            while (y < 0 || y > 7) {
-                wprintf(L"Les cordenades han d'estar entre 0 i 7\n");
-                wprintf(L"Coordenada Y: ");
-                std::cin >> y;
-            }
-            tauler.selecBombeta(x, y);
-            historial_tirades[i] = tauler.getOnBombetes();
+            // Demanar les coordenades X i Y
+            x = demanarInt("Coordenada X?", 0, 7);
+            y = demanarInt("Coordenada Y?", 0, 7);
+
+            tauler.premerBombeta(x, y);
+            historial_tirades[i] = tauler.getBombetesEnceses();
         }
-        tauler.imprimir();
+        tauler.visualitzar();
         wprintf(L"Ja no tens mes tirades. El joc ha acabat\n");
-        // Una vez acabada la partida informar de cuantas bombillas estaban encendida i apagadas despues de cada tirada
+
+        // Un cop acabada la partida imprimim quantes contenidor estaben enceses a cada ronda
         for (int i = 0; i < numtir; i++) {
             wprintf(L"Tirada %d: %d enceses i %d apagades\n", i + 1, historial_tirades[i], 64 - historial_tirades[i]);
         }
+
+        // Deixem lliure la memoria que ocupava l'array d'historial de tirades
         delete[] historial_tirades;
-        // Preguntar si quiere jugar otra vez
-        // SI> Vuelves al principio, pides toda la informacion
-        // NO> Cierras el programa
-        wprintf(L"Vols tornar a jugar?(n o N per acabar)\n");
-        char respuesta;
-        std::cin >> respuesta;
-        if(respuesta == 'n' || respuesta == 'N') {
-            jugar = false;
-        }
-        tauler.offAll();
+
+        jugar = tornarJugar(&tauler);
     }
 
     return 0;
+}
+
+static bool tornarJugar(Tauler* tauler) {
+    // Preguntar si vol tornar a jugar, si el jugador introdueix n o N acaba.
+    wprintf(L"Vols tornar a jugar? (n o N per acabar)\n");
+    char respuesta;
+    std::cin >> respuesta;
+    if(respuesta == 'n' || respuesta == 'N') {
+        return false;
+    }
+    tauler->apagar();
+    return true;
+}
+
+// Funció que demana un int a l'usuari amb la pregunta que se li passi com a argument
+// i que s'encarrega de demanar el valor a l'usuari fins que aquest estigui
+// dins dels limits que se li passen per parametre.
+static int demanarInt(const std::string& pregunta, int min, int max) {
+    wprintf(L"%s: [%d, %d]", pregunta.c_str(), min, max);
+    int val;
+    std::cin >> val;
+    while (val < min || val > max) {
+        wprintf(L"El valor ha d'estar entre 0 i 7");
+        wprintf(L"%s: [%d, %d]", pregunta.c_str(), min, max);
+        std::cin >> val;
+    }
+    return val;
 }

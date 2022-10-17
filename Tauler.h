@@ -10,26 +10,27 @@
 
 class Tauler {
 private:
-    int w = 8;
-    int h = 8;
-    // TODO: Cambiar de array de 1D a array de 2D (bombetes[8][8])
-    Bombeta bombetes[8][8];
+    int columnes = 8;
+    int files = 8;
+    // TODO: Cambiar de array de 1D a array de 2D (contenidor[8][8])
+    Bombeta contenidor[8][8];
     int moviments_x[8] = {2, 1, -2, -1, 2, -2, 1, -1};
     int moviments_y[8] = {1, 2, 1, 2, -1, -1, -2, -2};
     // TODO: Contador de cuantas bombillas hay encendidas, cada vez q se modifica una se tiene q actualizar
+    int enceses;
 public:
     Tauler();
-    void imprimir();
+    void visualitzar();
     Bombeta* getBombeta(int x, int y);
     void setBombeta(int x, int y, bool val);
     void toggleBombeta(int x, int y);
-    void selecBombeta(int x, int y);
+    void premerBombeta(int x, int y);
     // Metodo para encender n bombetas aleatoriamente (lo q hay en main, se tiene q hacer en un metodo)
-    void onRandomBombeta(int numBombetes);
+    void encendre(int numBombetes);
     // Metodo para apagar todas las bombillas
-    void offAll();
+    void apagar();
     // Metodo para contar cuantas bombillas hay encendidas
-    int getOnBombetes();
+    int getBombetesEnceses();
 
     // Ningun metodo aqui puede tener "std::cin"
 };
