@@ -92,14 +92,11 @@ void Tauler::onRandomBombeta(int numBombetes) {
             numx = random(lim_inf, lim_sup);
             numy = random(lim_inf, lim_sup);
         }
-        wprintf(L"%d, %d\n", numx, numy);
         this->setBombeta(numx,numy, true);
     }
 }
 
 int random(int min, int max) {
-    /*srand(time(NULL));
-    return min + rand() % (max+1 - min);*/
     return rand() % max + min;
 }
 
